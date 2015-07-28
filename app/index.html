@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,11 +20,13 @@
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
 <body>
-	<h1>Проверка сервера 1</h1>
+	<h1>Проверка сервера</h1>
 	<!--[if lt IE 7]>
 	<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com">обновите</a> его.</p>
-	<!--[endif]-->
-	<script src="bower/jquery/dist/jquery.js"></script>
+	<![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>')</script>
 	<script src="js/main.js"></script>
 </body>
 </html>
