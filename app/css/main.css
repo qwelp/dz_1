@@ -1,3 +1,10 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background: url(../images/fon.png) repeat;
+}
 .clearfix:before,
 .clearfix:after {
 	 content: " ";
@@ -56,7 +63,7 @@
 	height: 47px;
 	background-position: 0 -209px;
 }
-.sprite-smo-facebook-active {
+.sprite-smo-facebook:hover {
 	width: 47px;
 	height: 47px;
 	background-position: 0 -256px;
@@ -66,7 +73,7 @@
 	height: 47px;
 	background-position: 0 -303px;
 }
-.sprite-smo-github-active {
+.sprite-smo-github:hover {
 	width: 47px;
 	height: 47px;
 	background-position: 0 -350px;
@@ -76,7 +83,7 @@
 	height: 47px;
 	background-position: 0 -397px;
 }
-.sprite-smo-tweeter-active {
+.sprite-smo-tweeter:hover {
 	width: 47px;
 	height: 47px;
 	background-position: 0 -444px;
@@ -84,10 +91,48 @@
 .sprite-smo-vk {
 	width: 47px;
 	height: 47px;
-	background-position: 0 -491px;
+	background-position: 0 -538px;
 }
-.sprite-smo-vk-active {
+.sprite-smo-vk:hover {
 	width: 47px;
 	height: 47px;
-	background-position: 0 -538px;
+	background-position: 0 -491px;
+}
+.leftCol {
+	float: left;
+}
+.rightCol {
+	float: right;
+}
+.centerCol {
+	text-align: center;
+}
+.centerBlock {
+	margin: 0 auto;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	border: 1px solid #666;
+}
+#mainHeader {
+	border: 1px solid #c00;
+	width: 1200px;
+}
+#main {
+	width: 960px;
+	margin-top: 40px; /* margin-bottom в main.js метод _footerPosition */
+	border: 1px solid #000;
+}
+#mainFooter {
+	position: relative;
+	width: 960px;
+}
+.smoList {
+	list-style-type: none;
+}
+.smoList li {
+	float: left;
+	margin-left: 25px;
 }
