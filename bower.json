@@ -2,7 +2,7 @@
   "name": "dz1_bun",
   "dependencies": {
     "modernizer": "~2.8.2",
-    "jquery": "~2.1.4",
+    "jquery": "1.11.3",
     "normalize.css": "~3.0.3"
   }
 }

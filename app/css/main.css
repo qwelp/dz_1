@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'fira_sanslight';
+	src: url('firasans-light.eot');
+	src: url('firasans-light.eot?#iefix') format('embedded-opentype'),
+		url('firasans-light.woff') format('woff'),
+		url('firasans-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 html {
 	height: 100%;
 }
@@ -23,7 +32,7 @@ body {
 	height: 32px;
 	background-position: 0 0;
 }
-.sprite-aut-open {
+.sprite-aut-open, .sprite-aut-close:hover {
 	width: 20px;
 	height: 32px;
 	background-position: 0 -32px;
@@ -98,14 +107,42 @@ body {
 	height: 47px;
 	background-position: 0 -491px;
 }
-.leftCol {
+.posRelative {
+	position: relative;
+}
+.posVert {
+	position: absolute;
+	top: 50%;
+	/* Половина height вычесляется в main.js методом _alignVertical */
+}
+.posCenter {
+	position: absolute;
+	left: 50%;
+	/* Половина width вычесляется в main.js методом _alignCenter */
+}
+.posLeft {
+	left: 0;
+}
+.posRight {
+	right: 0;
+}
+.fLeft {
 	float: left;
 }
-.rightCol {
+.fRight {
 	float: right;
 }
-.centerCol {
+.alignLeft {
+	text-align: left;
+}
+.alignRight {
+	text-align: right;
+}
+.alignCenter {
 	text-align: center;
+}
+.vAlignMiddle {
+	vertical-align: middle;
 }
 .centerBlock {
 	margin: 0 auto;
@@ -114,23 +151,38 @@ body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	border: 1px solid #666;
+	min-width: 960px;
 }
 #mainHeader {
-	border: 1px solid #c00;
-	width: 1200px;
+	background: #EFF2F7 url(../images/line.png) no-repeat bottom center;
+}
+.mainHeaderWidth {
+	height: 119px;
+	max-width: 1200px;
+	min-width: 960px;
+}
+.mainFooterWidth {
+	height: 80px;
+	width: 960px;
 }
 #main {
-	width: 960px;
-	margin-top: 40px; /* margin-bottom в main.js метод _footerPosition */
-	border: 1px solid #000;
+	min-width: 960px;
+	margin-top: 40px;
+	/* padding-bottom в файле main.js метод _footerPosition переменная _mainPaddingBottom */
 }
 #mainFooter {
 	position: relative;
-	width: 960px;
+	background: #EFF2F7 url(../images/line.png) no-repeat top center;
+	font-family: "Fira Sans", Arial, sans-serif;
+	font-size: 13px;
+	color: #4a545d;
+	min-width: 960px;
 }
+
 .smoList {
 	list-style-type: none;
+	margin: 0;
+	display: inline-block;
 }
 .smoList li {
 	float: left;
