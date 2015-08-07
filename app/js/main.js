@@ -6,14 +6,14 @@ var qwelp = (function(){
 
 	function init(){
 		_footerPosition(_footerId, _mainId, _mainPaddingBottom);
-
 		$(window).resize(function(e) {
-			_sledMenu();
+			_sledMenu(e);
 		});
 		$("body").on("click", "#mobMenu", function(e) {
 			e.preventDefault();
 			_showMenu(".menuVert");
 		});
+		_pageActive();
 	}
 
 	/*Позиция Footer в зависимости от высоты*/
@@ -21,8 +21,9 @@ var qwelp = (function(){
 		$(footer).css("margin-top", "-" + $(footer).height() + "px");
 		$(main).css("padding-bottom", ($(footer).height()+paddingBottom) + "px");
 	}
-	function _sledMenu() {
-		if ($('body').width() > 960) {
+	function _sledMenu(e) {
+		e.preventDefault();
+		if ($('body').width() > 1024) {
 			$(".menuVert").show();
 		} else {
 			$(".menuVert").hide();
@@ -30,7 +31,17 @@ var qwelp = (function(){
 	}
 	function _showMenu(element) {
 		$(element).toggle();
-
+	}
+	function _pageActive() {
+		var url = window.location.pathname;
+		$(".menuVertList li").removeClass("active");
+		$(".menuVertList li a").each(function(index, el) {
+			var $this = $(this);
+			if("/" + $this.attr("href") === url)
+			{
+				$this.parent().addClass('active');
+			}
+		});
 	}
 
 	return {

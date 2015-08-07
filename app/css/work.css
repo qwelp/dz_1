@@ -1,0 +1,62 @@
+.imgWorkList {
+  list-style-type: none;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+.imgWorkList li {
+  display: inline-block;
+  width: 181px;
+  margin: 0 15px 20px 15px;
+  vertical-align: top;
+}
+.imgWorkListScreen {
+  border-radius: 5px;
+  border: 2px solid #3ba8c0;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.imgWorkList a {
+  font-size: 13px;
+  font-family: "Fira Sans";
+  color: rgb(59, 168, 192);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+}
+.imgWorkList p {
+  font-size: 15px;
+  font-family: "Fira Sans";
+  color: rgb(74, 84, 93);
+  line-height: 1.2;
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+}
+.addWork a {
+  background: #edf8fc;
+  border: 1px dashed #3ba8c0;
+  display: table-cell;
+  width: 181px;
+  height: 127px;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 13px;
+  font-family: "Fira Sans";
+  line-height: 1.2;
+  font-style: normal;
+  text-decoration: none;
+}
+.addWork a p {
+  color: rgb(59, 168, 192);
+}
+@media screen and (max-width: 390px) {
+  .imgWorkList li {
+    width: 90%;
+  }
+  .addWork {
+    text-align: center;
+  }
+
+}
