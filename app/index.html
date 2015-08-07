@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta viewport="width=device-width">
 	<title>Портфолио Буна Владимира Юрьевича</title>
 	<!-- SEO -->
 	<meta name="description" content="Портфолио Буна Владимира Юрьевича">
@@ -13,45 +14,164 @@
 	<link rel="icon" href="/favicon.ico" type="images/x-icon">
 	<!-- bower CSS -->
 	<link rel="stylesheet" href="bower/normalize.css/normalize.css">
+	<!-- FONT -->
+	<link rel="stylesheet" href="font/font.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/about-me.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
+	<!--[if lt IE 9]>
+		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
 </head>
 <body>
 	<!--[if lt IE 7]>
 	<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com">обновите</a> его.</p>
 	<![endif]-->
-	<section id="wrapper">
+	<div id="wrapper">
 		<header id="mainHeader" role="banner">
-			<div class="mainHeaderWidth centerBlock posRelative">
-				<div class="posVert">
+			<div class="mainHeaderWidth">
+				<div class="mainHeaderLogo">
 					<a title="Портфолио Буна Владимира Юрьевича" href="#">
-						<img src="images/logo.png" height="42" width="243" alt="Портфолио Буна Владимира Юрьевича" title="Портфолио Буна Владимира Юрьевича">
+						<img id="logo" src="images/logo.png" height="42" width="243" alt="Портфолио Буна Владимира Юрьевича" title="Портфолио Буна Владимира Юрьевича">
+						<img id="m-logo" src="images/m-logo.png" height="40" width="50" alt="Портфолио Буна Владимира Юрьевича" title="Портфолио Буна Владимира Юрьевича">
+						<h1 class="slogan">Портфолио Буна Владимира Юрьевича</h1>
 					</a>
 				</div>
-				<div class="posVert posRight">
+				<div class="mainHeaderSocial">
 					<ul class="smoList clearfix">
-						<li><a target="_blank" title="Группа в контакте" class="sprite sprite-smo-vk" href="#"></a></li>
-						<li><a target="_blank" title="Страница в tweeter" class="sprite sprite-smo-tweeter" href="#"></a></li>
-						<li><a target="_blank" title="Группа в facebook" class="sprite sprite-smo-facebook" href="#"></a></li>
-						<li><a target="_blank" title="Проекты на github" class="sprite sprite-smo-github" href="#"></a></li>
+						<li><a target="_blank" title="Группа в контакте" class="sprite sprite-smo-vk" href="#">vk.com</a></li>
+						<li><a target="_blank" title="Страница в tweeter" class="sprite sprite-smo-tweeter" href="#">tweeter.com</a></li>
+						<li><a target="_blank" title="Группа в facebook" class="sprite sprite-smo-facebook" href="#">facebook.com</a></li>
+						<li><a target="_blank" title="Проекты на github" class="sprite sprite-smo-github" href="#">github.com</a></li>
 					</ul>
+				</div>
+				<div class="mainHeaderMenu">
+					<a id="mobMenu" href="#"><img alt="Меню" title="Меню" src="images/menu.png" height="21" width="25"></a>
 				</div>
 			</div>
 		</header>
-		<main id="main" role="main" class="mainBodyWidth centerBlock clearfix">
-			1
-		</main>
-	</section>
-	<footer id="mainFooter">
-		<div class="mainFooterWidth centerBlock posRelative">
-			<div class="posVert">
-				<a title="Авторизация" class="sprite sprite-aut-close" href="#"></a>
+		<div id="wrap" class="clearfix">
+			<div role="main" id="main">
+				<section class="infoBlock clearfix">
+					<h2>Основная информация</h2>
+					<div class="table userListInfo">
+						<div class="td">
+							<div class="imgCircle"><img src="images/bun.JPG" alt="qwelp"></div>
+						</div>
+						<div class="td">
+							<ul class="userInfoList">
+							<li><span class="userInfoList-title">Меня зовут:</span><span class="userInfoList-text">Бун Владимир Юрьевич</span></li>
+							<li><span class="userInfoList-title">Мой возраст:</span><span class="userInfoList-text">34 года</span></li>
+							<li><span class="userInfoList-title">Мой город:</span><span class="userInfoList-text">Москва, Россия</span></li>
+							<li><span class="userInfoList-title">Моя специализация:</span><span class="userInfoList-text">Веб-мастер</span></li>
+							<li>
+								<span class="userInfoList-title">Ключевые навыки:</span>
+								<span class="userInfoList-text">
+									<ul class="userInfoList-work">
+										<li>php</li>
+										<li>mysql</li>
+										<li>javaScript</li>
+										<li>jquery</li>
+										<li>html</li>
+										<li>css</li>
+										<li>xml</li>
+										<li>git</li>
+										<li>gulp</li>
+										<li>bower</li>
+										<li>npm</li>
+										<li>1c-bitrix</li>
+									</ul>
+								</span>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</section>
+				<section class="infoBlock clearfix">
+					<h2>Опыт работы</h2>
+					<ul class="infoBlock-list">
+						<li>
+							<div class="table">
+								<div class="td marker">
+									<span class="sprite sprite-marker-portfolio"></span>
+								</div>
+								<div class="td">
+									<p>"ИП Боровицкий" - Продавец дисков</p>Сентябрь 2005 - Август 2008
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="table">
+								<div class="td marker">
+									<span class="sprite sprite-marker-portfolio"></span>
+								</div>
+								<div class="td">
+									<p>"ИП Боровицкий" - Продавец дисков</p>Сентябрь 2005 - Август 2008
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="infoBlock clearfix">
+					<h2>Образование</h2>
+					<ul class="infoBlock-list">
+						<li>
+							<div class="table">
+								<div class="td marker"><span class="sprite sprite-marker-tricorn"></span></div>
+								<div class="td"><p>Незаконченное высшее. ИДК</p>Сентябрь 2001 - Июнь 2007</div>
+							</div>
+						</li>
+						<li>
+							<div class="table">
+								<div class="td marker"><span class="sprite sprite-marker-list"></span></div>
+								<div class="td"><p>Курсы в "1c-bitrix"</p>Июль 2014 - декабрь 2014</div>
+							</div>
+						</li>
+						<li>
+							<div class="table">
+								<div class="td marker"><span class="sprite sprite-marker-list"></span></div>
+								<div class="td"><p>Курсы Loftschool.ru</p>Июль 2015 - по настоящее время</div>
+							</div>
+						</li>
+					</ul>
+				</section>
 			</div>
-			<div class="posVert posCenter">
-				<p class="pFira13px alignCenter">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
+			<aside id="wrapLeft">
+				<nav class="menuVert">
+					<ul class="menuVertList">
+						<li class="active"><a href="#">Обо мне</a></li>
+						<li><a href="#">Мои работы</a></li>
+						<li><a href="#">Связаться со мной</a></li>
+					</ul>
+				</nav>
+				<address class="contactBlock">
+					<ul id="contactInfo" class="clearfix">
+						<li class="contactInfoTitle">Контакты</li>
+						<li class="fonBlue1"><span class="sprite sprite-mail"></span><a href="#">qwelp@mail.ru</a></li>
+						<li class="fonBlue2"><span class="sprite sprite-phone"></span><a href="#">+7 926 392-07-34</a></li>
+						<li class="fonBlue3"><span class="sprite sprite-skype"></span><a href="#">qwelps</a></li>
+					</ul>
+				</address>
+			</aside>
+			<div class="smoListFooter">
+				<ul class="smoList clearfix">
+					<li><a target="_blank" title="Группа в контакте" class="sprite sprite-smo-vk" href="#">vk.com</a></li>
+					<li><a target="_blank" title="Страница в tweeter" class="sprite sprite-smo-tweeter" href="#">tweeter.com</a></li>
+					<li><a target="_blank" title="Группа в facebook" class="sprite sprite-smo-facebook" href="#">facebook.com</a></li>
+					<li><a target="_blank" title="Проекты на github" class="sprite sprite-smo-github" href="#">github.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer id="mainFooter">
+		<div class="mainFooterWidth">
+			<div class="td autFooter">
+				<a title="Авторизация" class="sprite sprite-aut-close autLink" href="#">Войти</a>
+			</div>
+			<div class="td">
+				<p class="copyRight">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
 			</div>
 		</div>
 	</footer>

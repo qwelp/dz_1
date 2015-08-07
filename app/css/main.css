@@ -1,18 +1,10 @@
-@font-face {
-	font-family: 'fira_sanslight';
-	src: url('firasans-light.eot');
-	src: url('firasans-light.eot?#iefix') format('embedded-opentype'),
-		url('firasans-light.woff') format('woff'),
-		url('firasans-light.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
 html {
 	height: 100%;
 }
 body {
 	height: 100%;
 	background: url(../images/fon.png) repeat;
+	font-family: 'fira_sansbook', sans-serif;
 }
 .clearfix:before,
 .clearfix:after {
@@ -107,68 +99,64 @@ body {
 	height: 47px;
 	background-position: 0 -491px;
 }
-.posRelative {
-	position: relative;
+.mainHeaderLogo {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -21px;
 }
-.posVert {
+.mainHeaderSocial {
 	position: absolute;
 	top: 50%;
-	/* Половина height вычесляется в main.js методом _alignVertical */
-}
-.posCenter {
-	position: absolute;
-	left: 50%;
-	/* Половина width вычесляется в main.js методом _alignCenter */
-}
-.posLeft {
-	left: 0;
-}
-.posRight {
+	margin-top: -23px;
 	right: 0;
 }
-.fLeft {
-	float: left;
+.slogan {
+	left: -9999px;
+	position: absolute;
 }
-.fRight {
-	float: right;
+.table {
+	display: table;
 }
-.alignLeft {
-	text-align: left;
-}
-.alignRight {
-	text-align: right;
-}
-.alignCenter {
-	text-align: center;
-}
-.vAlignMiddle {
+.td {
+	display: table-cell;
 	vertical-align: middle;
-}
-.centerBlock {
-	margin: 0 auto;
 }
 #wrapper {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	min-width: 960px;
 }
 #mainHeader {
 	background: #EFF2F7 url(../images/line.png) no-repeat bottom center;
+}
+#mainHeader:after, #mainFooter:before {
+	display: block;
+	height: 3px;
+	content: " ";
+	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
 }
 .mainHeaderWidth {
 	height: 119px;
 	max-width: 1200px;
 	min-width: 960px;
+	margin: 0 auto;
+	position: relative;
 }
 .mainFooterWidth {
+	display: table;
 	height: 80px;
 	width: 960px;
+	margin: 0 auto;
+	position: relative;
 }
-#main {
-	min-width: 960px;
-	margin-top: 40px;
-	/* padding-bottom в файле main.js метод _footerPosition переменная _mainPaddingBottom */
+#wrap {
+	margin: 0 auto;
+	width: 960px;
+	margin-top: 35px;
+	padding-bottom: 80px;
 }
 #mainFooter {
 	position: relative;
@@ -176,9 +164,22 @@ body {
 	font-family: "Fira Sans", Arial, sans-serif;
 	font-size: 13px;
 	color: #4a545d;
-	min-width: 960px;
+	font-family: 'fira_sanslight';
 }
-
+#wrapLeft {
+	width: 250px;
+	float: left;
+	padding-bottom: 20px;
+}
+#main {
+	width: 650px;
+	float: right;
+	margin-left: auto;
+	margin-right: auto;
+}
+#m-logo {
+	display: none;
+}
 .smoList {
 	list-style-type: none;
 	margin: 0;
@@ -186,5 +187,251 @@ body {
 }
 .smoList li {
 	float: left;
-	margin-left: 25px;
+	margin-left: 23px;
+}
+.smoList li a {
+	text-indent: -9999px;
+}
+.autLink {
+	text-indent: 30px;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: "Fira Sans", Arial, sans-serif;
+	color: #4a545d;
+	position: relative;
+	left: 33px;
+}
+.copyRight {
+	text-align: center;
+	font-family: "Fira Sans", Arial, sans-serif;
+	color: #4a545d;
+}
+#contactInfo {
+	margin: 0;
+	list-style-type: none;
+	background: #3ba8c0;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 0;
+	color: #FFF;
+	font-style: 21px;
+	font-family: "Fira Sans";
+	font-style: normal;
+}
+#contactInfo li {
+	padding: 7px 21px;
+}
+#contactInfo a {
+	white-space: nowrap;
+	padding: 0 21px 0 0;
+	color: #FFF;
+	font-size: 16px;
+	font-family: "Fira Sans";
+	font-style: normal;
+	text-decoration: none;
+	margin-left: 20px;
+}
+#contactInfo a:hover {
+	text-decoration: underline;
+}
+#contactInfo span {
+	display: inline-block;
+	margin-left: 21px;
+	position: relative;
+	top: 3px;
+}
+.fonBlue1 {
+	background: #41b9d4;
+}
+.fonBlue2 {
+	background: #48cbe8;
+}
+.fonBlue3 {
+	background: #51daf8;
+}
+.mainHeaderMenu {
+	display: none;
+	right: 0px;
+	position: absolute;
+	top: 50%;
+	margin-top: -12px;
+	margin-right: 30px;
+}
+.menuVert {
+	margin-bottom: 23px;
+	display: block;
+}
+.menuVertList {
+	background: #eff3f7;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.menuVertList li {
+
+}
+.menuVertList li a {
+	font-size: 21px;
+	font-family: "Fira Sans";
+	color: #959aa8;
+	text-decoration: none;
+	display: block;
+	padding: 22px 18px;
+	margin: 0 10px;
+	border-top: 2px solid #3ba8c0;
+	line-height: 27px;
+}
+.menuVertList li a:hover {
+	color: #3ba8c0;
+}
+.menuVertList li:first-child a {
+	border-bottom: 0;
+}
+.menuVertList .active {
+	background: #3ba8c0;
+	margin-bottom: -2px;
+}
+.menuVertList:first-child .active {
+	margin-top: 0;
+}
+.menuVertList .active a, .menuVertList .active a:hover {
+	color: #FFF;
+	font-size: 23px;
+}
+.smoListFooter .smoList {
+	display: none;
+}
+@media screen and (max-width: 1260px) {
+	.mainHeaderLogo {
+		margin-left: 30px;
+	}
+	.mainHeaderSocial {
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width: 960px) {
+
+	.mainHeaderWidth {
+		max-width: 99%;
+		min-width: 85%;
+	}
+	.mainFooterWidth, #wrap {
+		width: 100%;
+	}
+	#wrapLeft {
+		width: 100%;
+		float: none;
+	}
+	#main {
+		width: 650px;
+		float: none;
+	}
+	.mainHeaderMenu {
+		display: block;
+	}
+	.smoList {
+		margin-right: 100px;
+	}
+	.menuVert {
+		position: absolute;
+		top: 95px;
+		right: 0;
+		box-shadow: 1px 2px 9px 1px rgba(0,0,0,.3);
+		z-index: 5;
+		display: none;
+	}
+	.menuVertList {
+		border-radius: 0px;
+	}
+	.contactBlock {
+
+	}
+	#contactInfo {
+		padding: 0;
+		display: table;
+		width: 100%;
+		border-radius: 0;
+	}
+	#contactInfo li {
+		display: table-cell;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+	.autLink, .contactInfoTitle {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 730px) {
+	#contactInfo {
+		padding: 0;
+		display: block;
+		width: 100%;
+	}
+	.smoList {
+		display: none;
+	}
+	#contactInfo {
+		display: block;
+	}
+	#contactInfo li {
+		display: block;
+		text-align: center;
+	}
+	#main {
+		width:95%;
+	}
+	.copyRight {
+		line-height: 14px;
+	}
+	.contactInfoTitle {
+		display: none;
+	}
+	.menuVert {
+		position: absolute;
+		top: 95px;
+		left: 0;
+		box-shadow: 1px 2px 9px 1px rgba(0,0,0,.3);
+		z-index: 5;
+	}
+	.menuVertList {
+		border-radius: 0px;
+	}
+	.menuVertList li a {
+		border-color: #959aa8;
+		margin: 0;
+		text-align: center;
+		position: relative;
+	}
+	.menuVertList li {
+		position: relative;
+		z-index: 1;
+	}
+	.menuVertList li.active {
+		margin-top: -2px;
+		z-index: 2;
+		position: relative;
+	}
+	.smoListFooter {
+		text-align: center;
+	}
+	.smoListFooter .smoList {
+		display: inline-block;
+		margin: 10px 0;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	#logo {
+		display: none;
+	}
+	#m-logo {
+		display: block;
+	}
+	.smoList li {
+		margin-left: 5px;
+	}
 }

@@ -1,13 +1,19 @@
 var qwelp = (function(){
 
 	var _footerId = '#mainFooter',
-		_mainId = "#main";
-		_mainPaddingBottom = 40; /*отступ снизу от main в px*/
+		_mainId = "#main",
+		_mainPaddingBottom = 0; /*отступ снизу от main в px*/
 
 	function init(){
 		_footerPosition(_footerId, _mainId, _mainPaddingBottom);
-		_alignVertical();
-		_alignCenter();
+
+		$(window).resize(function(e) {
+			_sledMenu();
+		});
+		$("body").on("click", "#mobMenu", function(e) {
+			e.preventDefault();
+			_showMenu(".menuVert");
+		});
 	}
 
 	/*Позиция Footer в зависимости от высоты*/
@@ -15,21 +21,16 @@ var qwelp = (function(){
 		$(footer).css("margin-top", "-" + $(footer).height() + "px");
 		$(main).css("padding-bottom", ($(footer).height()+paddingBottom) + "px");
 	}
-
-	/*Высчитавает половину у высоты класса .posVert для выравнивания по вертикали*/
-	function _alignVertical() {
-		$(".posVert").each(function(){
-			var $this = $(this);
-			$this.css("margin-top", "-" + ($this.height()/2) + "px");
-		});
+	function _sledMenu() {
+		if ($('body').width() > 960) {
+			$(".menuVert").show();
+		} else {
+			$(".menuVert").hide();
+		}
 	}
+	function _showMenu(element) {
+		$(element).toggle();
 
-	/*Высчитавает половину у ширины класса .posCenter для выравнивания по горизонтали*/
-	function _alignCenter() {
-		$(".posCenter").each(function(){
-			var $this = $(this);
-			$this.css("margin-left", "-" + ($this.width()/2) + "px");
-		});
 	}
 
 	return {
