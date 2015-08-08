@@ -58,9 +58,10 @@
 	padding-left: 10px;
 	position: relative;
 	top: 2px;
+	display: inline-block;
+	max-width: 230px;
 }
 .userInfoList-work {
-	max-width: 230px;
 	display: inline-block;
 }
 .userInfoList-work li {
@@ -96,7 +97,7 @@
 	font-size: 15px;
 	font-family: "Fira Sans";
 	color: #4a545d;
-	margin: 0 0 13px 0;
+	margin: 0 0 20px 0;
 }
 .infoBlock-list li .marker {
 	width: 80px;
@@ -110,6 +111,7 @@
 	font-size: 17px;
 	margin: 0 0 0 0;
 	padding: 0;
+	line-height: 17px;
 }
 @media screen and (max-width: 1024px) {
 	#main {
@@ -125,6 +127,9 @@
 		padding: 0;
 		margin: 0;
 	}
+	.infoBlock-list p {
+		width: 98%;
+	}
 	.userInfoList, .infoBlock-list li .marker, .infoBlock-list li {
 		width: 100%;
 	}
@@ -139,5 +144,8 @@
 	}
 	.imgCircle {
 		top: 0px;
+	}
+	.userInfoList-text {
+		max-width: 100%;
 	}
 }

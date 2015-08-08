@@ -47,16 +47,21 @@
   line-height: 1.2;
   font-style: normal;
   text-decoration: none;
+  margin: 0 auto;
 }
 .addWork a p {
   color: rgb(59, 168, 192);
 }
-@media screen and (max-width: 390px) {
+#addProject {
+  display: none;
+  width: 362px;
+}
+@media screen and (max-width: 730px) {
+  .addWorkLink {
+    display: inline-block;
+  }
   .imgWorkList li {
-    width: 90%;
+      text-align: center;
+      width: 90%;
   }
-  .addWork {
-    text-align: center;
-  }
-
 }

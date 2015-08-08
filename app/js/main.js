@@ -57,4 +57,30 @@ $(document).ready(function($) {
 	if (!Modernizr.input.placeholder){
 		$('input, textarea').placeholder();
 	}
+
+	$("body").on('click', '.addWorkLink', function(e) {
+		e.preventDefault();
+		$('#addProject').bPopup({
+			easing: 'easeOutBack', //uses jQuery easing plugin
+			speed: 450,
+			modalColor:"#58697a",
+			opacity:.75,
+			closeClass:"formClose",
+			transition: 'slideDown'
+		});
+	});
+	$(".form input[type=file]").change(function() {
+		var $this = $(this),
+			fileName = $this.val(),
+			fileArray = fileName.split('\\'),
+			msg = $this.parents("div").find(".formLabelUpload");
+
+		if(fileArray[fileArray.length-1].length === 0)
+		{
+			msg.text(msg.data("placeholder"));
+		} else {
+			msg.text(fileArray[fileArray.length-1]);
+		}
+	});
+
 });

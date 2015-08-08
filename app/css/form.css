@@ -1,0 +1,165 @@
+::-webkit-input-placeholder {
+	font-family: "Fira Sans";
+	color:#48CBE8;
+	font-size: 13px;
+}
+::-moz-placeholder          {font-family: "Fira Sans";color:#48CBE8;font-size: 13px;}/* Firefox 19+ */
+:-moz-placeholder           {font-family: "Fira Sans";color:#48CBE8;font-size: 13px;}/* Firefox 18- */
+:-ms-input-placeholder      {font-family: "Fira Sans";color:#48CBE8;font-size: 13px;}
+.form {
+
+}
+.form__wrap {
+	background-color: #eff3f7;
+	border-radius: 4px;
+	padding-bottom: 20px;
+}
+.form__wrap__popUp {
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	box-shadow: 0 6px 13px 4px rgba(13,16,7,.3);
+}
+.formGroup {
+	margin: 10px 10px 10px 10px;
+	max-width: 100%;
+}
+.formGroup:before,
+.formGroup:after, .form:before, .form:after {
+	 content: " ";
+	 display: table;
+}
+.formGroup:after, .form:after {
+	 clear: both;
+}
+.formCol__100 {
+	max-width: 100%;
+}
+.formCol__50 {
+	max-width: 50%;
+}
+.formTitle {
+	background-color: rgb(72, 203, 232);
+	border-radius: 4px;
+	font-family: "Fira Sans";
+	color: #FFF;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	line-height: 30px;
+	font-size:25px;
+	padding: 8px 10px 4px 10px;
+	border-bottom: 5px solid #67dffa;
+	position: relative;
+}
+.formClose {
+	position: absolute;
+	top: 50%;
+	margin-top: -12px;
+	right: 15px;
+	width: 25px;
+	height: 25px;
+	background: url(../images/close.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.formLabel {
+	color: rgb(149, 154, 168);
+	display: block;
+	text-align: left;
+	line-height: 20px;
+	margin-bottom: 5px;
+	font-family: "Fira Sans";
+}
+.formColCenter {
+	text-align: center;
+}
+.formColLeft {
+	float: left;
+}
+.formColRight {
+	float: right;
+}
+.form input[type=text], .form textarea {
+	border: 1px solid rgb(72, 203, 232);
+	border-radius: 3px;
+	background-color: rgb(251, 252, 253);
+	font-size: 13px;
+	font-family: "Fira Sans";
+	color: #48CBE8;
+	padding: 3px 5px 8px 5px;
+	padding: 10px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.formButtonSubmit, .formButtonReset {
+	display: inline-block;
+	width: 137px;
+	height: 33px;
+	color: #fff;
+	font-family: 'Fira Sans';
+	font-size: 19px;
+	border: solid;
+	border-width: 0 0 2px 0;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	margin-top: 10px;
+}
+.formButtonSubmit {
+	border-color: #3ba8c0;
+	background-color: #48cbe8;
+}
+.formButtonReset {
+	border-color: #687b8f;
+	background-color: #849db5;
+}
+.formButtonSubmit:hover, .formButtonReset:hover {
+	border-width: 0;
+}
+.formButtonSubmit:active, .formButtonReset:active {
+	border-width: 2px 0 0;
+}
+.formFieldUpload {
+	position: relative;
+	border: 1px solid rgb(72, 203, 232);
+	border-radius: 3px;
+	font-size: 13px;
+	font-family: "Fira Sans";
+	color: #48CBE8;
+	padding: 3px 5px 8px 5px;
+	width: 100%;
+	padding: 10px;
+	height: 43px;
+	background: #FFF url(../images/uploadFile.png) no-repeat right 0;
+	cursor: pointer;
+	margin-top: 5px;
+	-webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;
+}
+.formFieldUpload input[type=file] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	outline: 0;
+	border: none;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	cursor: pointer;
+}
+.formLabelUpload {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+.formCaptchaImg {
+	border: 1px solid rgb(72, 203, 232);
+	border-radius: 3px;
+	background-color: rgb(251, 252, 253);
+	width: 95%;
+}

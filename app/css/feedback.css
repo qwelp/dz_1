@@ -1,0 +1,23 @@
+#addFeedback {
+	width: 650px;
+	margin-bottom: 30px;
+}
+#addFeedback .formTitle {
+	border-bottom: 20px solid #67dffa;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+#addFeedback .formGroup {
+	margin: 20px 122px;
+}
+#addFeedback #feedbackCapcha {
+	position: relative;
+	top: 15px;
+}
+#addFeedback input[type=text] {
+	width: 190px;
+}
+@media screen and (max-width: 730px) {
+
+}

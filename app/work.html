@@ -20,11 +20,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/about-me.css">
 	<link rel="stylesheet" href="css/work.css">
+	<link rel="stylesheet" href="css/feedback.css">
+	<link rel="stylesheet" href="css/form.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
-	<!--[if lt IE 9]>
-		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -34,7 +33,7 @@
 		<header id="mainHeader" role="banner">
 			<div class="mainHeaderWidth">
 				<div class="mainHeaderLogo">
-					<a title="Портфолио Буна Владимира Юрьевича" href="#">
+					<a title="Портфолио Буна Владимира Юрьевича" href="/">
 						<img id="logo" src="images/logo.png" height="42" width="243" alt="Портфолио Буна Владимира Юрьевича" title="Портфолио Буна Владимира Юрьевича">
 						<img id="m-logo" src="images/m-logo.png" height="40" width="50" alt="Портфолио Буна Владимира Юрьевича" title="Портфолио Буна Владимира Юрьевича">
 						<h1 class="slogan">Портфолио Буна Владимира Юрьевича</h1>
@@ -71,7 +70,7 @@
 						<li>
 							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
 							<a href="#">www.site.ru</a>
-							<p>Информация о проекте 1 превью 2 строки....</p>
+							<p>Информация о проекте 1 превью 2 строки....s dfsdfsdfdsfsdfsd fddsfdsf sdfsdfs dfsdfsdfsdf</p>
 						</li>
 						<li>
 							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
@@ -81,13 +80,15 @@
 						<li>
 							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
 							<a href="#">www.site.ru</a>
-							<p>Информация о проекте 1 превью 2 строки....</p>
+							<p>Информация о проек sdfdsfsd sdfsdf sfdsfs sdfsdf те 1 превью 2 строки....</p>
 						</li>
 						<li class="addWork">
-							<a href="#">
-								<img src="images/img_empty.png" alt="">
-								<p>Добавить</p>
-							</a>
+							<div class="addWorkLink">
+								<a href="#">
+									<img src="images/img_empty.png" alt="">
+									<p>Добавить</p>
+								</a>
+							</div>
 						</li>
 					</ul>
 				</section>
@@ -103,10 +104,10 @@
 				<address class="contactBlock">
 					<ul id="contactInfo" class="clearfix">
 						<li class="contactInfoTitle">Контакты</li>
-						<li class="fonBlue1"><span class="sprite sprite-mail"></span><a href="#">qwelp@mail.ru</a></li>
-						<li class="fonBlue2"><span class="sprite sprite-phone"></span><a href="#">+7 926 392-07-34</a></li>
-						<li class="fonBlue3"><span class="sprite sprite-skype"></span><a href="#">qwelps</a></li>
-					</ul>
+						<li class="fonBlue1"><span class="sprite sprite-mail"></span><a href="mailto:qwelp@mail.ru">qwelp@mail.ru</a></li>
+						<li class="fonBlue2"><span class="sprite sprite-phone"></span><a href="tel:79263920734">+7 926 392-07-34</a></li>
+						<li class="fonBlue3"><span class="sprite sprite-skype"></span><a href="skype:qwelps">qwelps</a></li>
+					<ul>
 				</address>
 			</aside>
 			<div class="smoListFooter">
@@ -131,6 +132,57 @@
 	</footer>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>')</script>
+	<script src="bower/jquery.easing/js/jquery.easing.min.js"></script>
+	<script src="bower/bpopup/jquery.bpopup.min.js"></script>
 	<script src="js/main.js"></script>
+	<!--[if lt IE 9]>
+		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
+	<![endif]-->
+	<div id="addProject">
+		<div class="form form__wrap form__wrap__popUp">
+			<div class="formTitle">
+				Добавление проекта<div class="formClose"></div>
+			</div>
+			<div class="formGroup">
+				<div class="formCol__100">
+					<label class="formLabel" for="projectName">Название проекта</label>
+					<div class="formField">
+						<input id="projectName" name="projectName" type="text" placeholder="Введите название">
+					</div>
+				</div>
+			</div>
+			<div class="formGroup">
+				<div class="formCol__100">
+					<label class="formLabel" for="projectImg">Картинка проекта</label>
+					<div class="formFieldUpload">
+						<span data-placeholder="Загрузите изображение" class="formLabelUpload">Загрузите изображение</span>
+						<input id="projectImg" name="projectImg" type="file">
+					</div>
+				</div>
+			</div>
+			<div class="formGroup">
+				<div class="formCol__100">
+					<label class="formLabel" for="projectUrl">URL проекта</label>
+					<div class="formField">
+						<input id="projectUrl" name="projectUrl" type="text" placeholder="Добавьте ссылку">
+					</div>
+				</div>
+			</div>
+			<div class="formGroup">
+				<div class="formCol__100">
+					<label class="formLabel" for="projectDescription">Описание</label>
+					<div class="formField">
+						<textarea rows="7" placeholder="Пара слов о Вашем проекте" name="projectDescription" id="projectDescription" cols="30" rows="10"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="formGroup">
+				<div class="formCol__100 formColCenter">
+					<button class="formButtonSubmit" type="submit">Добавить</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
