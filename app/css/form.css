@@ -20,9 +20,12 @@
 	z-index: 10;
 	box-shadow: 0 6px 13px 4px rgba(13,16,7,.3);
 }
-.formGroup {
+.formGroup, .formGroup__msg {
 	margin: 10px 10px 10px 10px;
 	max-width: 100%;
+}
+.formGroup__msg {
+
 }
 .formGroup:before,
 .formGroup:after, .form:before, .form:after {
@@ -78,7 +81,7 @@
 .formColRight {
 	float: right;
 }
-.form input[type=text], .form textarea {
+.form input[type=text], .form textarea, .form input[type=password]  {
 	border: 1px solid rgb(72, 203, 232);
 	border-radius: 3px;
 	background-color: rgb(251, 252, 253);
@@ -162,4 +165,58 @@
 	border-radius: 3px;
 	background-color: rgb(251, 252, 253);
 	width: 95%;
+}
+.has-error {
+	background-color: #fad2d1 !important;
+	border-color: #f97e76 !important;
+}
+.error {
+	background: rgba(249,126,118,.33);
+	border: 1px solid #f97e76;
+	border-radius: 4px;
+	padding: 10px;
+	color: #f97e76;
+	font-family: "Fira Sans";
+	position: relative;
+	display: none;
+}
+.errorClose {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: url(../images/error-close.png) no-repeat 0 0;
+	width: 11px;
+	height: 11px;
+}
+.errorTitle {
+	font-size: 25px;
+}
+.errorMsg {
+	font-size: 15px;
+	margin: 0;
+}
+.wellDone {
+	background: rgba(73, 187, 123,.33);
+	border: 1px solid #49bb7b;
+	border-radius: 4px;
+	padding: 10px;
+	color: rgb(73, 187, 123);
+	font-family: "Fira Sans";
+	position: relative;
+	display: none;
+}
+.wellDoneClose {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: url(../images/weel-done-close.png) no-repeat 0 0;
+	width: 11px;
+	height: 11px;
+}
+.wellDoneTitle {
+	font-size: 25px;
+}
+.wellDoneMsg {
+	font-size: 15px;
+	margin: 0;
 }

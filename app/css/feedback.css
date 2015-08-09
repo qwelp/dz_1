@@ -1,6 +1,6 @@
 #addFeedback {
 	width: 650px;
-	margin-bottom: 30px;
+	margin: 0 auto 30px auto;
 }
 #addFeedback .formTitle {
 	border-bottom: 20px solid #67dffa;
@@ -11,6 +11,10 @@
 #addFeedback .formGroup {
 	margin: 20px 122px;
 }
+#addFeedback .formGroup__msg {
+	margin-left: 122px;
+	margin-right: 122px;
+}
 #addFeedback #feedbackCapcha {
 	position: relative;
 	top: 15px;
@@ -19,5 +23,29 @@
 	width: 190px;
 }
 @media screen and (max-width: 730px) {
-
+	#addFeedback {
+		width: 300px;
+	}
+	#addFeedback input[type=text] {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+            box-sizing: border-box;
+	}
+	#addFeedback .formGroup, #addFeedback .formGroup__msg {
+		margin: 20px;
+	}
+	#addFeedback .formCol__50 {
+		width: 100%;
+	}
+	#addFeedback .formColLeft, #addFeedback .formColRight {
+		float: none;
+		display: block;
+		min-width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.formCaptchaImg {
+		min-width: 100%;
+	}
 }

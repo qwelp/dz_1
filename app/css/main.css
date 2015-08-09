@@ -315,6 +315,9 @@ body {
 .smoListFooter .smoList {
 	display: none;
 }
+.menuTreugolnik {
+	display: none;
+}
 @media screen and (max-width: 1260px) {
 	.mainHeaderLogo {
 		margin-left: 30px;
@@ -356,6 +359,17 @@ body {
 		box-shadow: 1px 2px 9px 1px rgba(0,0,0,.3);
 		z-index: 5;
 		display: none;
+	}
+	.menuTreugolnik {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 15px solid #3BA8C0;
+		top: -15px;
+		right: 32px;
+		display: block;
 	}
 	.menuVertList {
 		border-radius: 0px;
@@ -436,6 +450,9 @@ body {
 		display: inline-block;
 		margin: 10px 0;
 		padding: 0;
+	}
+	.menuTreugolnik {
+		right: 30px;
 	}
 }
 

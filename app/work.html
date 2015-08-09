@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/work.css">
 	<link rel="stylesheet" href="css/feedback.css">
 	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -58,29 +59,44 @@
 					<h2>Мои работы</h2>
 					<ul class="imgWorkList">
 						<li>
-							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
-							<a href="#">www.site.ru</a>
+							<div class="imgWorkListActive">
+								<div class="imgWorkListActiveName"><a href="#">Название</a></div>
+								<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt="Название"></a>
+							</div>
+							<a class="imgWorkListLink" href="#">www.site.ru</a>
 							<p>Информация о проекте 1 превью 2 строки....</p>
 						</li>
 						<li>
-							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
-							<a href="#">www.site.ru</a>
+							<div class="imgWorkListActive">
+								<div class="imgWorkListActiveName"><a href="#">Название</a></div>
+								<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt="Название"></a>
+							</div>
+							<a class="imgWorkListLink" href="#">www.site.ru</a>
 							<p>Информация о проекте 1 превью 2 строки....</p>
 						</li>
 						<li>
-							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
-							<a href="#">www.site.ru</a>
-							<p>Информация о проекте 1 превью 2 строки....s dfsdfsdfdsfsdfsd fddsfdsf sdfsdfs dfsdfsdfsdf</p>
-						</li>
-						<li>
-							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
-							<a href="#">www.site.ru</a>
+							<div class="imgWorkListActive">
+								<div class="imgWorkListActiveName"><a href="#">Название</a></div>
+								<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt="Название"></a>
+							</div>
+							<a class="imgWorkListLink" href="#">www.site.ru</a>
 							<p>Информация о проекте 1 превью 2 строки....</p>
 						</li>
 						<li>
-							<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt=""></a>
-							<a href="#">www.site.ru</a>
-							<p>Информация о проек sdfdsfsd sdfsdf sfdsfs sdfsdf те 1 превью 2 строки....</p>
+							<div class="imgWorkListActive">
+								<div class="imgWorkListActiveName"><a href="#">Название</a></div>
+								<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt="Название"></a>
+							</div>
+							<a class="imgWorkListLink" href="#">www.site.ru</a>
+							<p>Информация о проекте 1 превью 2 строки....</p>
+						</li>
+						<li>
+							<div class="imgWorkListActive">
+								<div class="imgWorkListActiveName"><a href="#">Название</a></div>
+								<a href="#"><img class="imgWorkListScreen" src="images/img-tmp.png" alt="Название"></a>
+							</div>
+							<a class="imgWorkListLink" href="#">www.site.ru</a>
+							<p>Информация о проекте 1 превью 2 строки....</p>
 						</li>
 						<li class="addWork">
 							<div class="addWorkLink">
@@ -95,9 +111,10 @@
 			</div>
 			<aside id="wrapLeft">
 				<nav class="menuVert">
+					<div class="menuTreugolnik"></div>
 					<ul class="menuVertList">
-						<li class="active"><a href="index.html">Обо мне</a></li>
-						<li><a href="work.html">Мои работы</a></li>
+						<li><a href="index.html">Обо мне</a></li>
+						<li class="active"><a href="work.html">Мои работы</a></li>
 						<li><a href="feedback.html">Связаться со мной</a></li>
 					</ul>
 				</nav>
@@ -123,7 +140,7 @@
 	<footer id="mainFooter">
 		<div class="mainFooterWidth">
 			<div class="td autFooter">
-				<a title="Авторизация" class="sprite sprite-aut-close autLink" href="#">Войти</a>
+				<a title="Авторизация" class="sprite sprite-aut-close autLink" href="aut.html">Войти</a>
 			</div>
 			<div class="td">
 				<p class="copyRight">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
@@ -134,6 +151,7 @@
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>')</script>
 	<script src="bower/jquery.easing/js/jquery.easing.min.js"></script>
 	<script src="bower/bpopup/jquery.bpopup.min.js"></script>
+	<script src="bower/qtip2/jquery.qtip.min.js"></script>
 	<script src="js/main.js"></script>
 	<!--[if lt IE 9]>
 		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -144,11 +162,26 @@
 			<div class="formTitle">
 				Добавление проекта<div class="formClose"></div>
 			</div>
-			<div class="formGroup">
+			<form action="">
+			<div class="formGroup__msg">
+				<div class="error">
+						<a href="#" class="errorClose closeBlock"></a>
+						<div class="errorTitle">Ошибка!</div>
+						<p class="errorMsg">На сервере произошла ошибка!</p>
+					</div>
+				</div>
+				<div class="formGroup__msg">
+					<div class="wellDone">
+						<a href="#" class="wellDoneClose closeBlock"></a>
+						<div class="wellDoneTitle">Успешно!</div>
+						<p class="wellDoneMsg">Данные добавленны успешно!</p>
+					</div>
+				</div>
+				<div class="formGroup">
 				<div class="formCol__100">
 					<label class="formLabel" for="projectName">Название проекта</label>
 					<div class="formField">
-						<input id="projectName" name="projectName" type="text" placeholder="Введите название">
+						<input qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Ошибка заполнения" id="projectName" name="projectName" type="text" placeholder="Введите название">
 					</div>
 				</div>
 			</div>
@@ -157,7 +190,7 @@
 					<label class="formLabel" for="projectImg">Картинка проекта</label>
 					<div class="formFieldUpload">
 						<span data-placeholder="Загрузите изображение" class="formLabelUpload">Загрузите изображение</span>
-						<input id="projectImg" name="projectImg" type="file">
+						<input qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Ошибка заполнения" id="projectImg" name="projectImg" type="file">
 					</div>
 				</div>
 			</div>
@@ -165,7 +198,7 @@
 				<div class="formCol__100">
 					<label class="formLabel" for="projectUrl">URL проекта</label>
 					<div class="formField">
-						<input id="projectUrl" name="projectUrl" type="text" placeholder="Добавьте ссылку">
+						<input qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Ошибка заполнения" id="projectUrl" name="projectUrl" type="text" placeholder="Добавьте ссылку">
 					</div>
 				</div>
 			</div>
@@ -173,7 +206,7 @@
 				<div class="formCol__100">
 					<label class="formLabel" for="projectDescription">Описание</label>
 					<div class="formField">
-						<textarea rows="7" placeholder="Пара слов о Вашем проекте" name="projectDescription" id="projectDescription" cols="30" rows="10"></textarea>
+						<textarea qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Ошибка заполнения" rows="7" placeholder="Пара слов о Вашем проекте" name="projectDescription" id="projectDescription" cols="30" rows="10"></textarea>
 					</div>
 				</div>
 			</div>
@@ -182,6 +215,7 @@
 					<button class="formButtonSubmit" type="submit">Добавить</button>
 				</div>
 			</div>
+			</form>
 		</div>
 	</div>
 </body>

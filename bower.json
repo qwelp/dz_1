@@ -3,6 +3,7 @@
   "dependencies": {
     "modernizer": "~2.8.2",
     "jquery": "1.11.3",
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "qtip2": "~2.2.1"
   }
 }

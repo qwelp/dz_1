@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="css/work.css">
 	<link rel="stylesheet" href="css/feedback.css">
 	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
 	<!-- modernizer -->
 	<script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -58,48 +59,65 @@
 				<div id="addFeedback">
 					<div class="form form__wrap">
 						<div class="formTitle">У вас интересный проект? Напишите мне</div>
-						<div class="formGroup">
-							<div class="formCol__50 formColLeft">
-								<label class="formLabel" for="feedbackName">Имя</label>
-								<input id="feedbackName" name="feedbackName" type="text" placeholder="Как к вам обращаться">
+						<form action="">
+							<div class="formGroup__msg">
+								<div class="error">
+									<a href="#" class="errorClose closeBlock"></a>
+									<div class="errorTitle">Ошибка!</div>
+									<p class="errorMsg">На сервере произошла ошибка!</p>
+								</div>
 							</div>
-							<div class="formCol__50 formColRight">
-								<label class="formLabel" for="feedbackEmail">Email</label>
-								<input id="feedbackEmail" name="feedbackEmail" type="text" placeholder="Куда мне писать">
+							<div class="formGroup__msg">
+								<div class="wellDone">
+									<a href="#" class="wellDoneClose closeBlock"></a>
+									<div class="wellDoneTitle">Успешно!</div>
+									<p class="wellDoneMsg">Данные добавленны успешно!</p>
+								</div>
 							</div>
-						</div>
-						<div class="formGroup">
-							<div class="formCol__100">
-								<label class="formLabel" for="feedbackMsg">Сообщение</label>
-								<textarea placeholder="Кратко в чем суть" name="feedbackMsg" id="feedbackMsg" cols="4" rows="8"></textarea>
+							<div class="formGroup">
+								<div class="formCol__50 formColLeft">
+									<label class="formLabel" for="feedbackName">Имя</label>
+									<input qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Вы не ввели имя" id="feedbackName" name="feedbackName" type="text" placeholder="Как к вам обращаться">
+								</div>
+								<div class="formCol__50 formColRight">
+									<label class="formLabel" for="feedbackEmail">Email</label>
+									<input qtip-position="right" qtip-position-mobile="bottom" qtipcontent="Вы не ввели email" id="feedbackEmail" name="feedbackEmail" type="text" placeholder="Куда мне писать">
+								</div>
 							</div>
-						</div>
-						<div class="formGroup">
-							<label class="formLabel" for="feedbackCapcha">Введите код, указанный на картинке</label>
-							<div class="formCol__50 formColLeft">
-								<img class="formCaptchaImg" src="images/captcha.png" alt="">
+							<div class="formGroup">
+								<div class="formCol__100">
+									<label class="formLabel" for="feedbackMsg">Сообщение</label>
+									<textarea qtip-position="left" qtip-position-mobile="bottom" qtipcontent="Что вы хотите?" placeholder="Кратко в чем суть" name="feedbackMsg" id="feedbackMsg" cols="4" rows="8"></textarea>
+								</div>
 							</div>
-							<div class="formCol__50 formColRight">
-								<input placeholder="Введите код" type="text" name="feedbackCapcha" id="feedbackCapcha">
+							<div class="formGroup">
+								<label class="formLabel" for="feedbackCapcha">Введите код, указанный на картинке</label>
+								<div class="formCol__50 formColLeft">
+									<img class="formCaptchaImg" src="images/captcha.png" alt="">
+								</div>
+								<div class="formCol__50 formColRight">
+									<input qtip-position="right" qtip-position-mobile="bottom" qtipcontent="Вы не ввели код" placeholder="Введите код" type="text" name="feedbackCapcha" id="feedbackCapcha">
+								</div>
 							</div>
-						</div>
-						<div class="formGroup">
-							<div class="formCol__50 formColLeft">
-								<button class="formButtonSubmit" type="submit">Отправить</button>
+							<div class="formGroup">
+								<div class="formCol__50 formColLeft">
+									<button class="formButtonSubmit" type="submit">Отправить</button>
+								</div>
+								<div class="formCol__50 formColRight">
+									<button class="formButtonReset" type="reset">Очистить</button>
+								</div>
 							</div>
-							<div class="formCol__50 formColRight">
-								<button class="formButtonReset" type="reset">Очистить</button>
-							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 			<aside id="wrapLeft">
 				<nav class="menuVert">
+					<div class="menuTreugolnik"></div>
 					<ul class="menuVertList">
-						<li class="active"><a href="index.html">Обо мне</a></li>
+						<li><a href="index.html">Обо мне</a></li>
 						<li><a href="work.html">Мои работы</a></li>
-						<li><a href="feedback.html">Связаться со мной</a></li>
+						<li class="active"><a href="feedback.html">Связаться со мной</a></li>
 					</ul>
 				</nav>
 				<address class="contactBlock">
@@ -124,7 +142,7 @@
 	<footer id="mainFooter">
 		<div class="mainFooterWidth">
 			<div class="td autFooter">
-				<a title="Авторизация" class="sprite sprite-aut-close autLink" href="#">Войти</a>
+				<a title="Авторизация" class="sprite sprite-aut-close autLink" href="aut.html">Войти</a>
 			</div>
 			<div class="td">
 				<p class="copyRight">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
@@ -133,6 +151,7 @@
 	</footer>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>')</script>
+	<script src="bower/qtip2/jquery.qtip.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
